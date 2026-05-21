@@ -1,0 +1,42 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "elevation": {
+    "$description": "NEW IN V0.1 — elevation/shadow system was not in v7 docs. Candidate values pending Phase 1 validation. Designed to be SUBTLE per the cinematic-not-polished axiom.",
+    "0": {
+      "$value": "none",
+      "$type": "shadow",
+      "$description": "Flat — no shadow. Default for production register.",
+      "$extensions": { "showrun.candidate": "v0.1-NEW" }
+    },
+    "1": {
+      "$value": "0 1px 2px rgba(15, 23, 42, 0.04)",
+      "$type": "shadow",
+      "$description": "Subtle — borders, inputs at rest. Cards on light backgrounds.",
+      "$extensions": { "showrun.candidate": "v0.1-NEW" }
+    },
+    "2": {
+      "$value": "0 4px 12px rgba(15, 23, 42, 0.06)",
+      "$type": "shadow",
+      "$description": "Soft — raised cards, hover state on flat cards.",
+      "$extensions": { "showrun.candidate": "v0.1-NEW" }
+    },
+    "3": {
+      "$value": "0 8px 24px rgba(15, 23, 42, 0.08)",
+      "$type": "shadow",
+      "$description": "Medium — modals, popovers.",
+      "$extensions": { "showrun.candidate": "v0.1-NEW" }
+    },
+    "4": {
+      "$value": "0 16px 40px rgba(15, 23, 42, 0.12)",
+      "$type": "shadow",
+      "$description": "High — dialogs, floating panels.",
+      "$extensions": { "showrun.candidate": "v0.1-NEW" }
+    },
+    "glow-teal": {
+      "$value": "0 0 32px rgba(0, 150, 188, 0.20)",
+      "$type": "shadow",
+      "$description": "Organic teal glow — cinematic register only. Use on hero elements or behind brand-mark on dark backgrounds.",
+      "$extensions": { "showrun.candidate": "v0.1-NEW", "showrun.register": "cinematic" }
+    }
+  }
+}

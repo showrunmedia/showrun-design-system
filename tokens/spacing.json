@@ -1,0 +1,17 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "spacing": {
+    "$description": "NEW IN V0.1 — spacing scale was not specified in v7 docs. Candidate values pending Phase 1 prototype validation.",
+    "0":   { "$value": "0px",   "$type": "dimension", "$description": "Zero — no spacing" },
+    "1":   { "$value": "4px",   "$type": "dimension", "$description": "Tightest — icon padding, inline gaps", "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "2":   { "$value": "8px",   "$type": "dimension", "$description": "Tight — small gaps, label-to-input",   "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "3":   { "$value": "12px",  "$type": "dimension", "$description": "Snug — button padding, badge interior", "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "4":   { "$value": "16px",  "$type": "dimension", "$description": "Base — default rhythm",               "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "5":   { "$value": "24px",  "$type": "dimension", "$description": "Comfortable — paragraph spacing",     "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "6":   { "$value": "32px",  "$type": "dimension", "$description": "Section — small section break",      "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "7":   { "$value": "48px",  "$type": "dimension", "$description": "Section large — H2 surround",        "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "8":   { "$value": "64px",  "$type": "dimension", "$description": "Slide gutter — deck margins",        "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "9":   { "$value": "96px",  "$type": "dimension", "$description": "Hero — landing-page hero verticals", "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "10":  { "$value": "128px", "$type": "dimension", "$description": "Hero large — full-bleed sections",   "$extensions": { "showrun.candidate": "v0.1-NEW" } }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "gradient": {
+    "$description": "Signature gradients per v7 locked spec. Gradient tokens use $type: gradient where supported; CSS string fallback in $extensions.",
+    "showrun-media": {
+      "$value": {
+        "type": "linear",
+        "angle": "to right",
+        "stops": [
+          { "color": "{color.teal.deep}",  "position": 0 },
+          { "color": "{color.blue.mid}",   "position": 1 }
+        ]
+      },
+      "$type": "gradient",
+      "$description": "Showrun Media (PRIMARY) — header bars, accent lines, brand mark backgrounds. Teal Deep → Blue Mid.",
+      "$extensions": {
+        "showrun.candidate": "v0.1",
+        "showrun.locked-march-2026": true,
+        "showrun.css-fallback": "linear-gradient(to right, #0096BC, #1C5AEC)",
+        "showrun.role": "primary"
+      }
+    },
+    "showrun-os": {
+      "$value": {
+        "type": "linear",
+        "angle": "to right",
+        "stops": [
+          { "color": "{color.teal.deep}",   "position": 0 },
+          { "color": "{color.teal.bright}", "position": 1 }
+        ]
+      },
+      "$type": "gradient",
+      "$description": "Showrun OS (PRODUCT) — teal-only gradient for product materials. Teal Deep → Teal Bright.",
+      "$extensions": {
+        "showrun.candidate": "v0.1",
+        "showrun.locked-march-2026": true,
+        "showrun.css-fallback": "linear-gradient(to right, #0096BC, #40C6E0)",
+        "showrun.role": "product"
+      }
+    },
+    "dark-accent": {
+      "$value": {
+        "type": "linear",
+        "angle": "to right",
+        "stops": [
+          { "color": "{color.teal.bright}", "position": 0 },
+          { "color": "{color.blue.bright}", "position": 1 }
+        ]
+      },
+      "$type": "gradient",
+      "$description": "Dark Accent — bright gradient for accents on dark backgrounds ONLY. Teal Bright → Blue Bright.",
+      "$extensions": {
+        "showrun.candidate": "v0.1",
+        "showrun.locked-march-2026": true,
+        "showrun.css-fallback": "linear-gradient(to right, #40C6E0, #5A8DF4)",
+        "showrun.usage-restriction": "dark-backgrounds-only"
+      }
+    }
+  }
+}

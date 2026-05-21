@@ -1,0 +1,33 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "semantic-dark": {
+    "$description": "Semantic tokens for DARK backgrounds. Per v7 spec: Teal Bright for accent text, Blue Bright for secondary. Body text Ice White. Increase body weight by one step (400 → 500) and letter-spacing +0.02em.",
+    "background": {
+      "page":     { "$value": "{color.neutral.midnight}", "$type": "color", "$description": "Premium dark background — title slides, covers" },
+      "standard": { "$value": "{color.neutral.dark}",     "$type": "color", "$description": "Standard dark background" },
+      "card":     { "$value": "{color.neutral.dark}",     "$type": "color", "$description": "Card surface on dark layout" }
+    },
+    "text": {
+      "primary":   { "$value": "{color.neutral.ice}",        "$type": "color", "$description": "Body text — Ice White" },
+      "secondary": { "$value": "{color.neutral.slate-light}","$type": "color", "$description": "Secondary text, captions" },
+      "tertiary":  { "$value": "{color.neutral.slate}",      "$type": "color", "$description": "Fine print" },
+      "heading":   { "$value": "{color.teal.bright}",        "$type": "color", "$description": "Accent text — Teal Bright" },
+      "link":      { "$value": "{color.blue.bright}",        "$type": "color", "$description": "Links — Blue Bright" },
+      "inverse":   { "$value": "{color.neutral.dark}",       "$type": "color", "$description": "Inverse text for use on light surfaces within a dark layout" }
+    },
+    "border": {
+      "default": { "$value": "{color.neutral.slate}",  "$type": "color", "$description": "Default border on dark — Slate" },
+      "accent":  { "$value": "{color.teal.bright}",    "$type": "color", "$description": "Accent border — Teal Bright" }
+    },
+    "interactive": {
+      "primary":        { "$value": "{color.teal.bright}",  "$type": "color", "$description": "Primary CTA fill on dark" },
+      "primary-text":   { "$value": "{color.neutral.midnight}", "$type": "color", "$description": "Text on primary CTA (dark text for contrast)" },
+      "secondary":      { "$value": "{color.blue.bright}",  "$type": "color", "$description": "Secondary CTA outline on dark" },
+      "secondary-text": { "$value": "{color.blue.bright}",  "$type": "color", "$description": "Text on secondary CTA on dark" }
+    },
+    "type-adjustments": {
+      "body-weight":          { "$value": "{font.weight.medium}",        "$type": "fontWeight", "$description": "Increase body weight 400→500 on dark per v7 spec" },
+      "letter-spacing-bonus": { "$value": "{font.letterSpacing.dark-bg-adjust}", "$type": "dimension", "$description": "Add +0.02em to body letter-spacing on dark" }
+    }
+  }
+}

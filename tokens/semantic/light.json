@@ -1,0 +1,29 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "semantic-light": {
+    "$description": "Semantic tokens for LIGHT backgrounds. Maps roles to primitive tokens. Per v7 spec: Teal Deep for headers/fills, Blue Mid for links/secondary. Body text always color.neutral.dark.",
+    "background": {
+      "page":    { "$value": "{color.neutral.ice}",   "$type": "color", "$description": "Page background — Ice White, NEVER stark white" },
+      "card":    { "$value": "{color.utility.white}", "$type": "color", "$description": "Card surface — white acceptable as inner surface" },
+      "callout": { "$value": "{color.utility.teal-tint}", "$type": "color", "$description": "Subtle callout wash" }
+    },
+    "text": {
+      "primary":   { "$value": "{color.neutral.dark}",        "$type": "color", "$description": "Body text — always Dark on light" },
+      "secondary": { "$value": "{color.neutral.slate}",       "$type": "color", "$description": "Secondary text, captions, H3" },
+      "tertiary":  { "$value": "{color.neutral.slate-light}", "$type": "color", "$description": "Metadata, fine print" },
+      "heading":   { "$value": "{color.teal.deep}",           "$type": "color", "$description": "Display, H1, H2 — Teal Deep" },
+      "link":      { "$value": "{color.blue.mid}",            "$type": "color", "$description": "Links — Blue Mid" },
+      "inverse":   { "$value": "{color.utility.white}",       "$type": "color", "$description": "Inverse text for use on dark accents within a light layout" }
+    },
+    "border": {
+      "default": { "$value": "{color.utility.border}", "$type": "color", "$description": "Default border for cards, tables, dividers" },
+      "accent":  { "$value": "{color.teal.deep}",      "$type": "color", "$description": "Accent border — header bars, brand markers" }
+    },
+    "interactive": {
+      "primary":         { "$value": "{color.teal.deep}", "$type": "color", "$description": "Primary CTA fill" },
+      "primary-text":    { "$value": "{color.utility.white}", "$type": "color", "$description": "Text on primary CTA" },
+      "secondary":       { "$value": "{color.blue.mid}",  "$type": "color", "$description": "Secondary CTA outline" },
+      "secondary-text":  { "$value": "{color.blue.mid}",  "$type": "color", "$description": "Text on secondary CTA" }
+    }
+  }
+}

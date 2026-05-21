@@ -1,0 +1,11 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "breakpoint": {
+    "$description": "NEW IN V0.1 — responsive breakpoints. Mobile-first. Candidate values pending Phase 3 website validation.",
+    "mobile":  { "$value": "0px",    "$type": "dimension", "$description": "Mobile — 0px and up (default)",        "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "tablet":  { "$value": "640px",  "$type": "dimension", "$description": "Tablet — 640px and up",                "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "desktop": { "$value": "1024px", "$type": "dimension", "$description": "Desktop — 1024px and up",              "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "wide":    { "$value": "1440px", "$type": "dimension", "$description": "Wide — 1440px and up",                 "$extensions": { "showrun.candidate": "v0.1-NEW" } },
+    "ultra":   { "$value": "1920px", "$type": "dimension", "$description": "Ultrawide — 1920px and up (deck size)","$extensions": { "showrun.candidate": "v0.1-NEW" } }
+  }
+}

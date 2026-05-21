@@ -1,0 +1,11 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "radius": {
+    "$description": "Corner radius system per warmth-layer-locked spec. Three discrete steps, no in-between values.",
+    "none":    { "$value": "0px",  "$type": "dimension", "$description": "No radius — sharp edges, for production-register tables and grids" },
+    "sharp":   { "$value": "4px",  "$type": "dimension", "$description": "Sharp — Production Register (cue sheets, schedules, SOWs, contracts). The precision IS the design.", "$extensions": { "showrun.candidate": "v0.1", "showrun.register": "production" } },
+    "default": { "$value": "8px",  "$type": "dimension", "$description": "Default — most card and button radii. Neutral register.",                                       "$extensions": { "showrun.candidate": "v0.1" } },
+    "soft":    { "$value": "12px", "$type": "dimension", "$description": "Soft — Cinematic Register (marketing, social, BTS, proposal covers).",                          "$extensions": { "showrun.candidate": "v0.1", "showrun.register": "cinematic" } },
+    "pill":    { "$value": "9999px","$type": "dimension","$description": "Pill — fully rounded badges, status indicators",                                                 "$extensions": { "showrun.candidate": "v0.1" } }
+  }
+}
