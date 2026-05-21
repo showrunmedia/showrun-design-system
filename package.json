@@ -1,0 +1,69 @@
+{
+  "name": "@showrunmedia/tokens",
+  "version": "0.1.0",
+  "description": "Showrun Media brand operating system — W3C Design Tokens, compiled to CSS, JSON, JS, and Tailwind preset for every downstream output.",
+  "type": "module",
+  "main": "build/js/tokens.js",
+  "types": "build/js/tokens.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/js/tokens.js",
+      "types": "./build/js/tokens.d.ts"
+    },
+    "./css": "./build/css/tokens.css",
+    "./css/dark": "./build/css/tokens-dark.css",
+    "./json": "./build/json/tokens.json",
+    "./json/nested": "./build/json/tokens-nested.json",
+    "./tailwind": "./build/tailwind/preset.js",
+    "./scss": "./build/scss/_tokens.scss"
+  },
+  "files": [
+    "build/",
+    "tokens/",
+    "assets/fonts/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "node style-dictionary.config.mjs",
+    "dev": "nodemon --watch tokens --ext json --exec npm run build",
+    "lint": "node scripts/lint-tokens.mjs",
+    "release": "npm run build && npm version",
+    "test": "echo \"v1.0.0 will add token lint and contrast tests\" && exit 0"
+  },
+  "keywords": [
+    "design-system",
+    "design-tokens",
+    "w3c-dtcg",
+    "showrun",
+    "style-dictionary",
+    "brand"
+  ],
+  "author": {
+    "name": "Daniel Esteves",
+    "email": "dan@showrunmedia.com",
+    "url": "https://showrunmedia.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/showrunmedia/showrun-design-system",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/showrunmedia/showrun-design-system.git"
+  },
+  "bugs": {
+    "url": "https://github.com/showrunmedia/showrun-design-system/issues"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@tokens-studio/sd-transforms": "^1.2.0",
+    "nodemon": "^3.1.0",
+    "style-dictionary": "^5.4.1"
+  }
+}
