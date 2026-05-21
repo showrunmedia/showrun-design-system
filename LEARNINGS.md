@@ -88,6 +88,24 @@ Per Pillar 3 of the build plan, actively watch for:
 - **Surfaced via:** Phase 0 pressure test
 - **Tags:** style-dictionary, agent-consumption, deferred
 
+### 2026-05-21 — showrun-brand-guidelines SKILL.md is divergent between plugin cache and GitHub canonical
+
+- **Signal:** During Phase 0 push, attempted to update `reftech12/de-ecosystem/SKILLS/showrun-brand-guidelines/SKILL.md` and discovered the GitHub version is v1.0.0 (9.7KB, simpler structure) while the Cowork plugin cache loads a v1.1.0 version (~28KB) with substantially more content (Strategic Positioning, full Voice & Tone register details, Document Layers, Design Axioms, Warmth Layer specs).
+- **Pattern:** DECISION-014 says `SKILLS/` is the canonical source of truth, but the runtime (Cowork plugin cache) is loading a different file. The two have drifted — likely the v1.1.0 update happened only in the plugin cache, not pushed to GitHub. This is the exact "version mismatch" pattern previously noted with de-tool-eval (per memory).
+- **Proposed fix:** Reconcile by canonicalizing the plugin-cache v1.1.0 into the GitHub SKILLS folder. Bump to v1.2.0 in the process, adding inline references to the new public design-system repo + sibling asset-generator skill. For Phase 0, created `SKILLS/showrun-brand-guidelines/IMPLEMENTATION.md` as a stop-gap to document the public repo without touching the divergent SKILL.md.
+- **Status:** proposed (deferred to standalone reconciliation session)
+- **Surfaced via:** Phase 0 push
+- **Tags:** skill, divergence, decision-014, cross-skill
+
+### 2026-05-21 — GitHub Apps API blocks pushing `.github/workflows/` files without `workflows` scope
+
+- **Signal:** Push of `.github/workflows/build.yml` and `.github/workflows/release.yml` via the github MCP returned `Not Found` errors from both `push_files` (multi-file) and `create_or_update_file` (single-file). The other 21 files in the same batch pushed successfully.
+- **Pattern:** GitHub treats `.github/workflows/` as a privileged path requiring the `workflows` OAuth scope beyond standard `repo` write. The MCP's GitHub auth token lacks this scope. Common limitation — affects any agentic system writing CI files via API.
+- **Proposed fix:** Daniel adds the two workflow files manually via github.com web UI (5 min, copy-paste from the staged content in outputs folder). For future repos, document this as a known limitation in the standing workflow doc. Long-term fix: configure a GitHub PAT with `workflows` scope and route workflow-file pushes through it.
+- **Status:** in-progress (Daniel's manual step)
+- **Surfaced via:** Phase 0 push
+- **Tags:** github, mcp-limitation, workflow-scope, manual-step
+
 ## Consolidated
 
 *(Populated as entries ship in releases.)*
