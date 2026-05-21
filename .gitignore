@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build output is committed for downstream consumers
+# (do NOT ignore build/)
+
+# Local environment
+.env
+.env.local
+.env.*.local
+
+# Editor
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test output
+coverage/
+
+# Template output (regenerated)
+templates/*/output/
+!templates/*/output/.gitkeep
+
+# OS
+Thumbs.db
