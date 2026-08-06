@@ -1,0 +1,37 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "image": {
+    "$description": "The Showrun grade — the brand's image treatment as tokens. Reference implementation: showrun_grade.py in the brand kit; it reproduces the reference plates byte-identically. Three operations, all SUBTRACTIVE — nothing is added that was not in the room. That rule is why every duotone, split-tone and temperature push was rejected: grading against the source is what makes an image look filtered.",
+    "grade": {
+      "saturation": {
+        "$value": 0.68,
+        "$type": "number",
+        "$description": "−32%. Sits below the vibrancy clients and agencies use — that gap is the separation."
+      },
+      "blackLift": {
+        "$value": 12,
+        "$type": "number",
+        "$description": "0–255. Shadows go milky rather than crushed: film, not video. This is why the charcoal ground must sit under 26/255."
+      },
+      "warmBias": {
+        "$value": 1.012,
+        "$type": "number",
+        "$description": "Red gain against blue. Keeps skin and tungsten honest once saturation drops."
+      }
+    },
+    "temperature": {
+      "default": {
+        "$value": "warm",
+        "$type": "string"
+      },
+      "coolException": {
+        "$value": "Available for specific campaigns or stage designs, but must come from natively cool light in the scene — overcast, north window, cool-white LED, blue hour, screen glow. Never from cooling a warm source.",
+        "$type": "string"
+      }
+    },
+    "people": {
+      "$value": "Photographed, not generated. Hybrid AI compositing is acceptable for objects and environments only — never for people, and never for anything presented as Daniel's own work.",
+      "$type": "string"
+    }
+  }
+}

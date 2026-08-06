@@ -1,150 +1,98 @@
 {
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "color": {
-    "teal": {
-      "deep": {
-        "$value": "#0096BC",
+    "$description": "Showrun MEDIA colour — v1.0.0, locked 2026-08-06. Showrun OS is a separate product with its own register; these do not apply to it. One accent; everything else neutral; all remaining colour comes from the photography. Every value was measured, and the ratio and reasoning are carried on the token so a future change can be checked rather than argued.",
+    "ground": {
+      "$description": "Exactly two. A mid-grey ground and a filled secondary panel were both tested and rejected — vermilion measures 1.16:1 on #808080, and any panel darker than paper drops the accent below AA-large. Secondary surfaces use a hairline-bordered card on paper.",
+      "paper": {
+        "$value": "#F5F4F1",
         "$type": "color",
-        "$description": "Showrun Teal — PRIMARY brand color. Headers on light backgrounds, fills, CTAs, table headers, accent bars, brand mark. THE Showrun color.",
+        "$description": "Light ground. Warm-neutral, R−B spread +4, so it flatters tungsten in the photography.",
         "$extensions": {
-          "showrun.candidate": "v0.1",
-          "showrun.locked-march-2026": true,
-          "showrun.role": "primary"
+          "showrun.role": "ground-light",
+          "showrun.locked": "2026-08-06"
         }
       },
-      "bright": {
-        "$value": "#40C6E0",
+      "charcoal": {
+        "$value": "#141416",
         "$type": "color",
-        "$description": "Signal Teal — accent text on dark backgrounds, highlights, badges on dark, gradient partner for Showrun OS.",
+        "$description": "Dark ground. Chosen against the photography: graded plates floor at ~26/255 luma because the Showrun grade lifts blacks. At luma 20.2 this sits BELOW that floor so images sit into the page. #1A1A1A matched the floor and edges dissolved; #1D1D1D sat above it and images punched a hole.",
         "$extensions": {
-          "showrun.candidate": "v0.1",
-          "showrun.locked-march-2026": true,
-          "showrun.role": "accent-on-dark"
+          "showrun.role": "ground-dark",
+          "showrun.locked": "2026-08-06"
         }
       }
     },
-    "blue": {
-      "mid": {
-        "$value": "#1C5AEC",
+    "text": {
+      "$description": "Pure values, reserved for type. Never used as grounds.",
+      "onPaper": {
+        "$value": "#000000",
         "$type": "color",
-        "$description": "Showrun Blue — secondary accent on light, links, outline buttons, gradient endpoint, data viz secondary.",
+        "$description": "19.09:1 on paper. AA + AAA.",
         "$extensions": {
-          "showrun.candidate": "v0.1",
-          "showrun.locked-march-2026": true,
-          "showrun.role": "secondary-on-light"
+          "showrun.role": "text-on-light"
         }
       },
-      "bright": {
-        "$value": "#5A8DF4",
-        "$type": "color",
-        "$description": "Signal Blue — secondary accent on dark, links on dark, badges on dark, gradient partner on dark backgrounds.",
-        "$extensions": {
-          "showrun.candidate": "v0.1",
-          "showrun.locked-march-2026": true,
-          "showrun.role": "secondary-on-dark"
-        }
-      }
-    },
-    "neutral": {
-      "midnight": {
-        "$value": "#0F172A",
-        "$type": "color",
-        "$description": "Midnight — premium dark backgrounds (title slides, closing slides, cover pages).",
-        "$extensions": {
-          "showrun.candidate": "v0.1",
-          "showrun.locked-march-2026": true,
-          "showrun.role": "background-dark-premium"
-        }
-      },
-      "dark": {
-        "$value": "#1E293B",
-        "$type": "color",
-        "$description": "Dark — standard dark backgrounds, section dividers, body text on light.",
-        "$extensions": {
-          "showrun.candidate": "v0.1",
-          "showrun.locked-march-2026": true,
-          "showrun.role": "background-dark-standard"
-        }
-      },
-      "slate": {
-        "$value": "#475569",
-        "$type": "color",
-        "$description": "Slate — secondary text, captions, H3 headers.",
-        "$extensions": {
-          "showrun.candidate": "v0.1",
-          "showrun.locked-march-2026": true,
-          "showrun.role": "text-secondary"
-        }
-      },
-      "slate-light": {
-        "$value": "#94A3B8",
-        "$type": "color",
-        "$description": "Light Slate — metadata, subtle text, footers, captions on dark.",
-        "$extensions": {
-          "showrun.candidate": "v0.1",
-          "showrun.locked-march-2026": true,
-          "showrun.role": "text-tertiary"
-        }
-      },
-      "ice": {
-        "$value": "#F1F5F9",
-        "$type": "color",
-        "$description": "Ice White — light backgrounds. NEVER use stark white (#FFFFFF) as a page/slide background.",
-        "$extensions": {
-          "showrun.candidate": "v0.1",
-          "showrun.locked-march-2026": true,
-          "showrun.role": "background-light"
-        }
-      }
-    },
-    "utility": {
-      "border": {
-        "$value": "#E2E8F0",
-        "$type": "color",
-        "$description": "Border — neutral border for cards, tables, dividers.",
-        "$extensions": { "showrun.candidate": "v0.1" }
-      },
-      "white": {
+      "onCharcoal": {
         "$value": "#FFFFFF",
         "$type": "color",
-        "$description": "White — text on dark backgrounds ONLY. Never use as a page/slide background.",
+        "$description": "18.40:1 on charcoal. AA + AAA.",
         "$extensions": {
-          "showrun.candidate": "v0.1",
-          "showrun.usage-restriction": "text-on-dark-only"
+          "showrun.role": "text-on-dark"
         }
-      },
-      "teal-tint": {
-        "$value": "rgba(0, 150, 188, 0.04)",
-        "$type": "color",
-        "$description": "Teal Tint — subtle callout wash on light backgrounds.",
-        "$extensions": { "showrun.candidate": "v0.1" }
       }
     },
-    "retired": {
-      "$description": "Colors EXPLICITLY RETIRED. Do not use. Documented here for legacy migration only.",
-      "old-blue": {
-        "$value": "#2563EB",
+    "grey": {
+      "$description": "Two, and two is the floor. No single value clears AA on both grounds — #6E6C69 is 4.76/3.52 and #808080 is 3.59/4.66. Dividers, hairlines and tints are alpha steps off the ground's grey, not separate tokens.",
+      "onPaper": {
+        "$value": "#6E6C69",
         "$type": "color",
-        "$description": "RETIRED — replaced by color.blue.mid (#1C5AEC).",
-        "$extensions": { "showrun.retired": true }
+        "$description": "4.76:1 on paper. Small text, labels, captions.",
+        "$extensions": {
+          "showrun.role": "muted-on-light"
+        }
       },
-      "old-cyan": {
-        "$value": "#0EA5E9",
+      "onCharcoal": {
+        "$value": "#9A9A9A",
         "$type": "color",
-        "$description": "RETIRED — replaced by color.teal.deep (#0096BC).",
-        "$extensions": { "showrun.retired": true }
+        "$description": "6.54:1 on charcoal. Small text, labels, captions.",
+        "$extensions": {
+          "showrun.role": "muted-on-dark"
+        }
+      }
+    },
+    "accent": {
+      "vermilion": {
+        "$value": "#FC4C13",
+        "$type": "color",
+        "$description": "The only accent. Unrestricted on charcoal (5.42). On paper it is 3.09 — AA-large — so it is used there for navigational text only (section labels, FIG numbers, running heads), never to set body paragraphs and never as the sole carrier of unique information.",
+        "$extensions": {
+          "showrun.role": "accent",
+          "showrun.locked": "2026-08-06",
+          "showrun.contrast": {
+            "onCharcoal": 5.42,
+            "onPaper": 3.09
+          }
+        }
+      }
+    },
+    "alpha": {
+      "$description": "Derived steps. Apply as opacity on the matching grey for the ground in use — never as new colour values.",
+      "divider": {
+        "$value": 0.55,
+        "$type": "number"
       },
-      "old-legacy-teal": {
-        "$value": "#3798A1",
-        "$type": "color",
-        "$description": "RETIRED — replaced by color.teal.deep (#0096BC).",
-        "$extensions": { "showrun.retired": true }
+      "softRule": {
+        "$value": 0.35,
+        "$type": "number"
       },
-      "old-showrun-red": {
-        "$value": "#D94423",
-        "$type": "color",
-        "$description": "RETIRED — no red in v7 system.",
-        "$extensions": { "showrun.retired": true }
+      "hairline": {
+        "$value": 0.22,
+        "$type": "number"
+      },
+      "tint": {
+        "$value": 0.12,
+        "$type": "number"
       }
     }
   }

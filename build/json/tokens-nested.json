@@ -1,0 +1,116 @@
+{
+  "breakpoint": {
+    "mobile": "0px",
+    "tablet": "640px",
+    "desktop": "1024px",
+    "wide": "1440px",
+    "ultra": "1920px"
+  },
+  "color": {
+    "ground": {
+      "paper": "#f5f4f1",
+      "charcoal": "#141416"
+    },
+    "text": {
+      "onPaper": "#000000",
+      "onCharcoal": "#ffffff"
+    },
+    "grey": {
+      "onPaper": "#6e6c69",
+      "onCharcoal": "#9a9a9a"
+    },
+    "accent": {
+      "vermilion": "#fc4c13"
+    },
+    "alpha": {
+      "divider": 0.55,
+      "softRule": 0.35,
+      "hairline": 0.22,
+      "tint": 0.12
+    }
+  },
+  "elevation": {
+    "0": "none",
+    "1": "0 1px 2px rgba(15, 23, 42, 0.04)",
+    "2": "0 4px 12px rgba(15, 23, 42, 0.06)",
+    "3": "0 8px 24px rgba(15, 23, 42, 0.08)",
+    "4": "0 16px 40px rgba(15, 23, 42, 0.12)"
+  },
+  "image": {
+    "grade": {
+      "saturation": 0.68,
+      "blackLift": 12,
+      "warmBias": 1.012
+    },
+    "temperature": {
+      "default": "warm",
+      "coolException": "Available for specific campaigns or stage designs, but must come from natively cool light in the scene — overcast, north window, cool-white LED, blue hour, screen glow. Never from cooling a warm source."
+    },
+    "people": "Photographed, not generated. Hybrid AI compositing is acceptable for objects and environments only — never for people, and never for anything presented as Daniel's own work."
+  },
+  "radius": {
+    "none": "0px",
+    "sharp": "4px",
+    "default": "8px",
+    "soft": "12px",
+    "pill": "9999px"
+  },
+  "semantic": {
+    "dark": {
+      "background": "#141416",
+      "text": "#ffffff",
+      "muted": "#9a9a9a",
+      "accent": "#fc4c13",
+      "rule": "#9a9a9a"
+    },
+    "light": {
+      "background": "#f5f4f1",
+      "text": "#000000",
+      "muted": "#6e6c69",
+      "accent": "#fc4c13",
+      "rule": "#6e6c69"
+    }
+  },
+  "spacing": {
+    "0": "0px",
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "5": "24px",
+    "6": "32px",
+    "7": "48px",
+    "8": "64px",
+    "9": "96px",
+    "10": "128px"
+  },
+  "typography": {
+    "family": {
+      "display": "Switzer",
+      "mono": "Martian Mono"
+    },
+    "weight": {
+      "display": 700,
+      "body": 500,
+      "label": 600
+    },
+    "size": {
+      "coverHeadline": "74px",
+      "sectionHeading": "46px",
+      "numeral": "186px",
+      "body": "17px",
+      "value": "17px",
+      "label": "14px"
+    },
+    "leading": {
+      "body": 1.62
+    },
+    "tracking": {
+      "coverHeadline": "-2.3px",
+      "sectionHeading": "-1.3px",
+      "numeral": "-8px",
+      "label": "0.12em",
+      "accentLabel": "0.14em"
+    }
+  }
+}

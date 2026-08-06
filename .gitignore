@@ -29,3 +29,4 @@ templates/*/output/
 
 # OS
 Thumbs.db
+package-lock.json

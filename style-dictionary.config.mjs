@@ -1,5 +1,6 @@
 // Showrun Design System — Style Dictionary v5 config
 // Compiles W3C DTCG tokens in tokens/**/*.json to multiple output formats.
+// Superseded token sets live in /_archive/ at the repo root, outside this glob.
 //
 // Outputs (committed to build/):
 //   - build/css/tokens.css           CSS custom properties for the LIGHT theme
@@ -92,6 +93,10 @@ module.exports = {
 
 // Build configuration
 const sd = new StyleDictionary({
+  // NOTE: Style Dictionary does not honour '!' negation in `source`. Superseded token
+  // sets therefore live OUTSIDE tokens/ — see /_archive/ at the repo root. Do not move
+  // them back under tokens/: the v0.1 teal/blue palette will compile into build/
+  // alongside the current tokens and downstream consumers will receive both.
   source: ['tokens/**/*.json'],
   preprocessors: ['tokens-studio'],
 

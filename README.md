@@ -10,6 +10,31 @@ It's organized as a **three-pillar brand operating system**:
 2. **Content** — canonical, reusable copy fragments (bios, methodology pitches, services, case studies, testimonials, FAQ) imported by every template
 3. **Orchestration** — protocols and a sibling skill (`showrun-asset-generator`) that turns an intent ("make me a proposal") into a finished, branded artifact
 
+
+## What v1.0.0 is
+
+**Scope: Showrun Media.** Showrun OS is a separate product with its own register and needs
+its own visual system — these tokens do not apply to it.
+
+> **One accent. Everything else neutral. All remaining colour comes from the photography.**
+
+| token | value | notes |
+|---|---|---|
+| `color.ground.paper` | `#F5F4F1` | light ground |
+| `color.ground.charcoal` | `#141416` | dark ground — sits under the photography's black point |
+| `color.text.onPaper` | `#000000` | 19.09:1 |
+| `color.text.onCharcoal` | `#FFFFFF` | 18.40:1 |
+| `color.grey.onPaper` | `#6E6C69` | 4.76:1 |
+| `color.grey.onCharcoal` | `#9A9A9A` | 6.54:1 |
+| `color.accent.vermilion` | `#FC4C13` | the only accent |
+
+Type is **Switzer** (display/body) and **Martian Mono** (labels). Image treatment is the
+Showrun grade — saturation x0.68, black lift +12, warm bias 1.012, all subtractive.
+
+Every colour value was measured rather than chosen by eye; the contrast ratio and the
+reasoning are carried on each token.
+
+
 ## What's inside
 
 ```
@@ -17,10 +42,10 @@ showrun-design-system/
 ├── tokens/                  W3C DTCG JSON — the single source of truth
 │   ├── color.json
 │   ├── typography.json
-│   ├── spacing.json         (NEW in v0.1 — pending Phase 1 validation)
+│   ├── spacing.json         (v0.1 — NOT yet reconciled to v1.0.0)
 │   ├── radius.json
-│   ├── elevation.json       (NEW in v0.1 — pending Phase 1 validation)
-│   ├── breakpoints.json     (NEW in v0.1 — pending Phase 3 validation)
+│   ├── elevation.json       (v0.1 — NOT yet reconciled to v1.0.0)
+│   ├── breakpoints.json     (v0.1 — NOT yet reconciled to v1.0.0)
 │   ├── gradients.json
 │   └── semantic/
 │       ├── light.json
@@ -50,7 +75,7 @@ showrun-design-system/
 │   └── transactional/       (Phase 6)
 ├── assets/
 │   ├── logos/               SVG + PNG + PDF for media & OS variants
-│   ├── fonts/               Albert Sans, Plus Jakarta Sans, Sedgwick Ave (self-hosted WOFF2)
+│   ├── fonts/               Switzer, Martian Mono (self-hosted WOFF2)
 │   └── photography/         Curated imagery + sourcing rules
 ├── docs/                    Developer + user guides
 ├── LEARNINGS.md             Self-improvement log (Pillar 3)
@@ -84,7 +109,7 @@ module.exports = { presets: [showrun], content: [...] };
 ### Code-generated documents (DOCX / PPTX / PDF)
 ```js
 import tokens from '@showrunmedia/tokens';
-// tokens.color.teal.deep.value === '#0096BC'
+// tokens.color.accent.vermilion.value === '#FC4C13'
 ```
 
 ### n8n / agents / non-Node consumers
@@ -106,7 +131,14 @@ Tokens are mirrored manually to each tool's brand kit until their MCP servers su
 
 ## Version policy
 
-- **v0.x — Candidate phase.** Tokens are marked `v0.1-candidate` and may change. The Phase 1 capabilities-deck prototype validates the system against real output. Phase 2 applies findings and tags `v1.0.0`.
+- **v1.0.0 — Locked 2026-08-06.** Colour, typography, semantic aliases, image grade and logo
+  assets are authoritative. Superseded v0.1 token sets are kept for provenance in `/_archive/`,
+  deliberately outside the `tokens/**` build glob.
+- **Geometry is deliberately not defined.** `spacing.json`, `radius.json`, `elevation.json`
+  and `breakpoints.json` remain at v0.1. They were not part of the identity work and are not
+  settled: they need further development and **will vary by document type** — a cue sheet, a
+  deck, a one-sheet and a web page do not share one geometry. Defining a global scale now
+  would invent a constraint rather than derive one. Do not treat them as authoritative.
 - **v1.x — Stable.** Major.minor.patch. Token additions are minor bumps. Breaking changes (removed/renamed tokens) are major bumps. Released quarterly from the LEARNINGS log per `docs/OPERATING_CADENCE.md`.
 
 ## Three sources of truth

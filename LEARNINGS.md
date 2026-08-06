@@ -129,3 +129,37 @@ Per Pillar 3 of the build plan, actively watch for:
 | Anti-pattern / "don't do this" | `docs/ANTIPATTERNS.md` (created when first one is logged) |
 
 If an entry doesn't fit any of these, it's probably a candidate for `docs/OPERATING_CADENCE.md` or a new doc.
+
+---
+
+## 2026-08-06 — Archived tokens were still compiling into the build
+
+**What happened.** While replacing the v0.1 palette with v1.0.0, the superseded tokens were
+moved to `tokens/_archive/` and the Style Dictionary source glob was updated to
+`['tokens/**/*.json', '!tokens/_archive/**']`. The build succeeded, so it looked done.
+
+It was not. **Style Dictionary does not honour `!` negation in `source`.** The archive was
+still being globbed, and `build/css/tokens.css` was emitting `--color-teal-deep: #0096bc`
+alongside `--color-accent-vermilion: #fc4c13`. Style Dictionary flagged "Token collisions
+detected (4)" — a warning easy to read past, since the build exits 0 either way.
+
+Had this shipped, every downstream consumer — the Astro site, the Tailwind preset, n8n, and
+Claude Design onboarded against this repo URL — would have received both palettes and been
+free to pick the retired one.
+
+**Fix.** Superseded token sets live in `/_archive/` at the **repo root**, outside the
+`tokens/**` glob. There is now a comment in `style-dictionary.config.mjs` saying so.
+
+**The general lesson.** A green build is not evidence that the right tokens shipped. Grep the
+build output for values that should be *gone*, not just for values that should be present.
+Absence is the harder thing to verify and the easier thing to get wrong.
+
+## 2026-08-06 — Root-level `$description` collides across token files
+
+Each token file carried a top-level `$description`. Style Dictionary merges all sources into
+one tree, so those five root keys overwrote each other — 4 collisions, and the surviving
+description was whichever file loaded last. Harmless to output but noisy, and it masked the
+archive collision above by making collisions look normal.
+
+**Fix.** Nest the description inside the file's top group (`color`, `typography`, `image`) or,
+for the two semantic files that share a `semantic` root, inside their own sub-group.

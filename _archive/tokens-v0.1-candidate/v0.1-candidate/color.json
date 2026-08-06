@@ -1,0 +1,151 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "color": {
+    "teal": {
+      "deep": {
+        "$value": "#0096BC",
+        "$type": "color",
+        "$description": "Showrun Teal — PRIMARY brand color. Headers on light backgrounds, fills, CTAs, table headers, accent bars, brand mark. THE Showrun color.",
+        "$extensions": {
+          "showrun.candidate": "v0.1",
+          "showrun.locked-march-2026": true,
+          "showrun.role": "primary"
+        }
+      },
+      "bright": {
+        "$value": "#40C6E0",
+        "$type": "color",
+        "$description": "Signal Teal — accent text on dark backgrounds, highlights, badges on dark, gradient partner for Showrun OS.",
+        "$extensions": {
+          "showrun.candidate": "v0.1",
+          "showrun.locked-march-2026": true,
+          "showrun.role": "accent-on-dark"
+        }
+      }
+    },
+    "blue": {
+      "mid": {
+        "$value": "#1C5AEC",
+        "$type": "color",
+        "$description": "Showrun Blue — secondary accent on light, links, outline buttons, gradient endpoint, data viz secondary.",
+        "$extensions": {
+          "showrun.candidate": "v0.1",
+          "showrun.locked-march-2026": true,
+          "showrun.role": "secondary-on-light"
+        }
+      },
+      "bright": {
+        "$value": "#5A8DF4",
+        "$type": "color",
+        "$description": "Signal Blue — secondary accent on dark, links on dark, badges on dark, gradient partner on dark backgrounds.",
+        "$extensions": {
+          "showrun.candidate": "v0.1",
+          "showrun.locked-march-2026": true,
+          "showrun.role": "secondary-on-dark"
+        }
+      }
+    },
+    "neutral": {
+      "midnight": {
+        "$value": "#0F172A",
+        "$type": "color",
+        "$description": "Midnight — premium dark backgrounds (title slides, closing slides, cover pages).",
+        "$extensions": {
+          "showrun.candidate": "v0.1",
+          "showrun.locked-march-2026": true,
+          "showrun.role": "background-dark-premium"
+        }
+      },
+      "dark": {
+        "$value": "#1E293B",
+        "$type": "color",
+        "$description": "Dark — standard dark backgrounds, section dividers, body text on light.",
+        "$extensions": {
+          "showrun.candidate": "v0.1",
+          "showrun.locked-march-2026": true,
+          "showrun.role": "background-dark-standard"
+        }
+      },
+      "slate": {
+        "$value": "#475569",
+        "$type": "color",
+        "$description": "Slate — secondary text, captions, H3 headers.",
+        "$extensions": {
+          "showrun.candidate": "v0.1",
+          "showrun.locked-march-2026": true,
+          "showrun.role": "text-secondary"
+        }
+      },
+      "slate-light": {
+        "$value": "#94A3B8",
+        "$type": "color",
+        "$description": "Light Slate — metadata, subtle text, footers, captions on dark.",
+        "$extensions": {
+          "showrun.candidate": "v0.1",
+          "showrun.locked-march-2026": true,
+          "showrun.role": "text-tertiary"
+        }
+      },
+      "ice": {
+        "$value": "#F1F5F9",
+        "$type": "color",
+        "$description": "Ice White — light backgrounds. NEVER use stark white (#FFFFFF) as a page/slide background.",
+        "$extensions": {
+          "showrun.candidate": "v0.1",
+          "showrun.locked-march-2026": true,
+          "showrun.role": "background-light"
+        }
+      }
+    },
+    "utility": {
+      "border": {
+        "$value": "#E2E8F0",
+        "$type": "color",
+        "$description": "Border — neutral border for cards, tables, dividers.",
+        "$extensions": { "showrun.candidate": "v0.1" }
+      },
+      "white": {
+        "$value": "#FFFFFF",
+        "$type": "color",
+        "$description": "White — text on dark backgrounds ONLY. Never use as a page/slide background.",
+        "$extensions": {
+          "showrun.candidate": "v0.1",
+          "showrun.usage-restriction": "text-on-dark-only"
+        }
+      },
+      "teal-tint": {
+        "$value": "rgba(0, 150, 188, 0.04)",
+        "$type": "color",
+        "$description": "Teal Tint — subtle callout wash on light backgrounds.",
+        "$extensions": { "showrun.candidate": "v0.1" }
+      }
+    },
+    "retired": {
+      "$description": "Colors EXPLICITLY RETIRED. Do not use. Documented here for legacy migration only.",
+      "old-blue": {
+        "$value": "#2563EB",
+        "$type": "color",
+        "$description": "RETIRED — replaced by color.blue.mid (#1C5AEC).",
+        "$extensions": { "showrun.retired": true }
+      },
+      "old-cyan": {
+        "$value": "#0EA5E9",
+        "$type": "color",
+        "$description": "RETIRED — replaced by color.teal.deep (#0096BC).",
+        "$extensions": { "showrun.retired": true }
+      },
+      "old-legacy-teal": {
+        "$value": "#3798A1",
+        "$type": "color",
+        "$description": "RETIRED — replaced by color.teal.deep (#0096BC).",
+        "$extensions": { "showrun.retired": true }
+      },
+      "old-showrun-red": {
+        "$value": "#D94423",
+        "$type": "color",
+        "$description": "RETIRED — no red in v7 system.",
+        "$extensions": { "showrun.retired": true }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "@showrunmedia/tokens",
-  "version": "0.1.0",
-  "description": "Showrun Media brand operating system — W3C Design Tokens, compiled to CSS, JSON, JS, and Tailwind preset for every downstream output.",
+  "version": "1.0.0",
+  "description": "Showrun Media brand operating system \u2014 W3C Design Tokens, compiled to CSS, JSON, JS, and Tailwind preset for every downstream output.",
   "type": "module",
   "main": "build/js/tokens.js",
   "types": "build/js/tokens.d.ts",
