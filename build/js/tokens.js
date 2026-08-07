@@ -2,11 +2,6 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-export const BreakpointMobile = "0px"; // Mobile — 0px and up (default)
-export const BreakpointTablet = "640px"; // Tablet — 640px and up
-export const BreakpointDesktop = "1024px"; // Desktop — 1024px and up
-export const BreakpointWide = "1440px"; // Wide — 1440px and up
-export const BreakpointUltra = "1920px"; // Ultrawide — 1920px and up (deck size)
 export const ColorGroundPaper = "#f5f4f1"; // Light ground. Warm-neutral, R−B spread +4, so it flatters tungsten in the photography.
 export const ColorGroundCharcoal = "#141416"; // Dark ground. Chosen against the photography: graded plates floor at ~26/255 luma because the Showrun grade lifts blacks. At luma 20.2 this sits BELOW that floor so images sit into the page. #1A1A1A matched the floor and edges dissolved; #1D1D1D sat above it and images punched a hole.
 export const ColorTextOnPaper = "#000000"; // 19.09:1 on paper. AA + AAA.
@@ -18,24 +13,20 @@ export const ColorAlphaDivider = 0.55;
 export const ColorAlphaSoftRule = 0.35;
 export const ColorAlphaHairline = 0.22;
 export const ColorAlphaTint = 0.12;
-export const Elevation0 = "none"; // Flat — no shadow. Default for production register.
-export const Elevation1 = "0 1px 2px rgba(15, 23, 42, 0.04)"; // Subtle — borders, inputs at rest. Cards on light backgrounds.
-export const Elevation2 = "0 4px 12px rgba(15, 23, 42, 0.06)"; // Soft — raised cards, hover state on flat cards.
-export const Elevation3 = "0 8px 24px rgba(15, 23, 42, 0.08)"; // Medium — modals, popovers.
-export const Elevation4 = "0 16px 40px rgba(15, 23, 42, 0.12)"; // High — dialogs, floating panels.
 export const ImageGradeSaturation = 0.68; // −32%. Sits below the vibrancy clients and agencies use — that gap is the separation.
 export const ImageGradeBlackLift = 12; // 0–255. Shadows go milky rather than crushed: film, not video. This is why the charcoal ground must sit under 26/255.
 export const ImageGradeWarmBias = 1.012; // Red gain against blue. Keeps skin and tungsten honest once saturation drops.
 export const ImageTemperatureDefault = "warm";
 export const ImageTemperatureCoolException =
   "Available for specific campaigns or stage designs, but must come from natively cool light in the scene — overcast, north window, cool-white LED, blue hour, screen glow. Never from cooling a warm source.";
-export const ImagePeople =
-  "Photographed, not generated. Hybrid AI compositing is acceptable for objects and environments only — never for people, and never for anything presented as Daniel's own work.";
-export const RadiusNone = "0px"; // No radius — sharp edges, for production-register tables and grids
-export const RadiusSharp = "4px"; // Sharp — Production Register (cue sheets, schedules, SOWs, contracts). The precision IS the design.
-export const RadiusDefault = "8px"; // Default — most card and button radii. Neutral register.
-export const RadiusSoft = "12px"; // Soft — Cinematic Register (marketing, social, BTS, proposal covers).
-export const RadiusPill = "9999px"; // Pill — fully rounded badges, status indicators
+export const ImageSourcingModes =
+  "original (real photography, graded) | hybrid (original supplies the true environment; generation completes the coverage) | generated (built from the creative brief, no source photography)";
+export const ImageSourcingBar =
+  "Believability, not provenance. Every mode must read as though a photographer was in the room. An image that announces itself as generated has failed, however it was made.";
+export const ImageSourcingPeople =
+  "The full range is available and the surface decides: invented people as art direction, Daniel's own likeness, and real collaborators or partners rendered with their own visual identity. Density is a judgement call per surface — a capabilities deck littered with the founder reads as self-regarding. Prefer him incidental and candid: in the background, on headset, mid-conversation with a client, a profile or a silhouette. Sprinkle, never saturate.";
+export const ImageSourcingLimits =
+  "Two, both about honesty rather than technique. (1) Never fabricate a factual claim — Daniel at an event he did not work, or a generated venue presented as a specific named client's production. The image may complete a true story; it may not invent one. (2) Real, identifiable people require their own permission. Invented figures are art direction and carry no such claim.";
 export const SemanticDarkBackground = "#141416";
 export const SemanticDarkText = "#ffffff";
 export const SemanticDarkMuted = "#9a9a9a";
@@ -46,17 +37,6 @@ export const SemanticLightText = "#000000";
 export const SemanticLightMuted = "#6e6c69";
 export const SemanticLightAccent = "#fc4c13"; // 3.09:1 — AA-large. Navigational text only on this ground.
 export const SemanticLightRule = "#6e6c69"; // Apply at alpha.hairline (0.22).
-export const Spacing0 = "0px"; // Zero — no spacing
-export const Spacing1 = "4px"; // Tightest — icon padding, inline gaps
-export const Spacing2 = "8px"; // Tight — small gaps, label-to-input
-export const Spacing3 = "12px"; // Snug — button padding, badge interior
-export const Spacing4 = "16px"; // Base — default rhythm
-export const Spacing5 = "24px"; // Comfortable — paragraph spacing
-export const Spacing6 = "32px"; // Section — small section break
-export const Spacing7 = "48px"; // Section large — H2 surround
-export const Spacing8 = "64px"; // Slide gutter — deck margins
-export const Spacing9 = "96px"; // Hero — landing-page hero verticals
-export const Spacing10 = "128px"; // Hero large — full-bleed sections
 export const TypographyFamilyDisplay = "Switzer"; // Display and body. Variable. Fontshare / ITF Free Font License. Chosen because it complements the logo wordmark through shared flat-sided roundness without impersonating it — a system face that matched would make the lockup read as set type rather than a mark.
 export const TypographyFamilyMono = "Martian Mono"; // Labels, values, title blocks, FIG captions. Chosen on measured x-height: 60.5% against IBM Plex Mono's 51.6% — 17% taller at the same nominal size, which is what fixed small-label legibility.
 export const TypographyWeightDisplay = 700; // 900 was too heavy.

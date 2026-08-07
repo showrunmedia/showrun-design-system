@@ -29,9 +29,24 @@
         "$type": "string"
       }
     },
-    "people": {
-      "$value": "Photographed, not generated. Hybrid AI compositing is acceptable for objects and environments only — never for people, and never for anything presented as Daniel's own work.",
-      "$type": "string"
+    "sourcing": {
+      "$description": "Generation is a first-class production method, not a fallback. The full spectrum is open — original photography, hybrid compositing, and fully generated scenes including invented people. What governs is the aesthetic, the context, and two honesty limits. Not provenance.",
+      "modes": {
+        "$value": "original (real photography, graded) | hybrid (original supplies the true environment; generation completes the coverage) | generated (built from the creative brief, no source photography)",
+        "$type": "string"
+      },
+      "bar": {
+        "$value": "Believability, not provenance. Every mode must read as though a photographer was in the room. An image that announces itself as generated has failed, however it was made.",
+        "$type": "string"
+      },
+      "people": {
+        "$value": "The full range is available and the surface decides: invented people as art direction, Daniel's own likeness, and real collaborators or partners rendered with their own visual identity. Density is a judgement call per surface — a capabilities deck littered with the founder reads as self-regarding. Prefer him incidental and candid: in the background, on headset, mid-conversation with a client, a profile or a silhouette. Sprinkle, never saturate.",
+        "$type": "string"
+      },
+      "limits": {
+        "$value": "Two, both about honesty rather than technique. (1) Never fabricate a factual claim — Daniel at an event he did not work, or a generated venue presented as a specific named client's production. The image may complete a true story; it may not invent one. (2) Real, identifiable people require their own permission. Invented figures are art direction and carry no such claim.",
+        "$type": "string"
+      }
     }
   }
 }

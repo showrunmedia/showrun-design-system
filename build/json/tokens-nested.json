@@ -1,11 +1,4 @@
 {
-  "breakpoint": {
-    "mobile": "0px",
-    "tablet": "640px",
-    "desktop": "1024px",
-    "wide": "1440px",
-    "ultra": "1920px"
-  },
   "color": {
     "ground": {
       "paper": "#f5f4f1",
@@ -29,13 +22,6 @@
       "tint": 0.12
     }
   },
-  "elevation": {
-    "0": "none",
-    "1": "0 1px 2px rgba(15, 23, 42, 0.04)",
-    "2": "0 4px 12px rgba(15, 23, 42, 0.06)",
-    "3": "0 8px 24px rgba(15, 23, 42, 0.08)",
-    "4": "0 16px 40px rgba(15, 23, 42, 0.12)"
-  },
   "image": {
     "grade": {
       "saturation": 0.68,
@@ -46,14 +32,12 @@
       "default": "warm",
       "coolException": "Available for specific campaigns or stage designs, but must come from natively cool light in the scene — overcast, north window, cool-white LED, blue hour, screen glow. Never from cooling a warm source."
     },
-    "people": "Photographed, not generated. Hybrid AI compositing is acceptable for objects and environments only — never for people, and never for anything presented as Daniel's own work."
-  },
-  "radius": {
-    "none": "0px",
-    "sharp": "4px",
-    "default": "8px",
-    "soft": "12px",
-    "pill": "9999px"
+    "sourcing": {
+      "modes": "original (real photography, graded) | hybrid (original supplies the true environment; generation completes the coverage) | generated (built from the creative brief, no source photography)",
+      "bar": "Believability, not provenance. Every mode must read as though a photographer was in the room. An image that announces itself as generated has failed, however it was made.",
+      "people": "The full range is available and the surface decides: invented people as art direction, Daniel's own likeness, and real collaborators or partners rendered with their own visual identity. Density is a judgement call per surface — a capabilities deck littered with the founder reads as self-regarding. Prefer him incidental and candid: in the background, on headset, mid-conversation with a client, a profile or a silhouette. Sprinkle, never saturate.",
+      "limits": "Two, both about honesty rather than technique. (1) Never fabricate a factual claim — Daniel at an event he did not work, or a generated venue presented as a specific named client's production. The image may complete a true story; it may not invent one. (2) Real, identifiable people require their own permission. Invented figures are art direction and carry no such claim."
+    }
   },
   "semantic": {
     "dark": {
@@ -70,19 +54,6 @@
       "accent": "#fc4c13",
       "rule": "#6e6c69"
     }
-  },
-  "spacing": {
-    "0": "0px",
-    "1": "4px",
-    "2": "8px",
-    "3": "12px",
-    "4": "16px",
-    "5": "24px",
-    "6": "32px",
-    "7": "48px",
-    "8": "64px",
-    "9": "96px",
-    "10": "128px"
   },
   "typography": {
     "family": {

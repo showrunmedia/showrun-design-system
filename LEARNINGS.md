@@ -163,3 +163,41 @@ archive collision above by making collisions look normal.
 
 **Fix.** Nest the description inside the file's top group (`color`, `typography`, `image`) or,
 for the two semantic files that share a `semantic` root, inside their own sub-group.
+
+---
+
+## v1.0.1 — Shipping unvalidated tokens is worse than shipping none
+
+**2026-08-07.** An audit of the published system against the brand kit found the repo
+contradicting its own documentation, and two of the contradictions were live on the public
+remote for a day.
+
+**1. Geometry shipped as authoritative while the kit called it undefined.**
+`spacing`, `radius`, `elevation` and `breakpoints` were v0.1 first-pass candidates. Their own
+`$description` fields said so — *"candidate values pending Phase 1 prototype validation"* — but
+Style Dictionary does not care about prose. The build emitted `--spacing-*`, `--radius-*`,
+`--elevation-*` and `--breakpoint-*` looking exactly as authoritative as `--color-accent-vermilion`,
+which was measured. **A consumer cannot tell a guess from a decision once both are custom
+properties.** Removed in v1.0.1.
+
+**2. `elevation` was blue.** Every level used `rgba(15, 23, 42, …)` — Tailwind's slate-900 — in a
+system that had explicitly retired blue and whose dark ground is a neutral `#141416`. It came in
+with a scaffold default and survived because nobody renders a shadow token in isolation.
+*Scaffold defaults are not neutral; they carry another system's opinions.*
+
+**3. `image.people` still carried a rule the brand had reversed.** The token read *"Photographed,
+not generated… never for people."* That rule had been corrected days earlier in the brand kit and
+the agent skill — but not here, in the machine-readable copy that consumers actually pull. The
+prose sources were treated as the source of truth during the correction; the tokens were the
+source of truth in practice.
+
+**The pattern behind all three:** a correction is only real in the artifact that gets *consumed*.
+Documentation and tokens drift apart silently because nothing fails when they disagree.
+
+**Adopted.**
+- Do not publish a token you cannot defend with a measurement or a decision record. Absent
+  beats provisional.
+- When a brand rule changes, grep the **built output** for the old rule, not just the docs.
+  `grep -r "<old rule>" build/` is the check that would have caught this on day one.
+- Treat any value inherited from a framework scaffold as unexamined until measured against the
+  palette it now lives in.

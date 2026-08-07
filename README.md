@@ -6,7 +6,7 @@ This repo is the canonical, machine-readable source for Showrun Media's brand. I
 
 It's organized as a **three-pillar brand operating system**:
 
-1. **Foundation** — design tokens (color, typography, spacing, radius, gradients, elevation, breakpoints) in W3C Design Tokens Community Group format
+1. **Foundation** — design tokens (colour, typography, semantic aliases, image grade) in W3C Design Tokens Community Group format. Geometry is **not** part of the foundation yet — see Version policy
 2. **Content** — canonical, reusable copy fragments (bios, methodology pitches, services, case studies, testimonials, FAQ) imported by every template
 3. **Orchestration** — protocols and a sibling skill (`showrun-asset-generator`) that turns an intent ("make me a proposal") into a finished, branded artifact
 
@@ -42,11 +42,7 @@ showrun-design-system/
 ├── tokens/                  W3C DTCG JSON — the single source of truth
 │   ├── color.json
 │   ├── typography.json
-│   ├── spacing.json         (v0.1 — NOT yet reconciled to v1.0.0)
-│   ├── radius.json
-│   ├── elevation.json       (v0.1 — NOT yet reconciled to v1.0.0)
-│   ├── breakpoints.json     (v0.1 — NOT yet reconciled to v1.0.0)
-│   ├── gradients.json
+│   ├── image.json
 │   └── semantic/
 │       ├── light.json
 │       └── dark.json
@@ -134,11 +130,22 @@ Tokens are mirrored manually to each tool's brand kit until their MCP servers su
 - **v1.0.0 — Locked 2026-08-06.** Colour, typography, semantic aliases, image grade and logo
   assets are authoritative. Superseded v0.1 token sets are kept for provenance in `/_archive/`,
   deliberately outside the `tokens/**` build glob.
-- **Geometry is deliberately not defined.** `spacing.json`, `radius.json`, `elevation.json`
-  and `breakpoints.json` remain at v0.1. They were not part of the identity work and are not
-  settled: they need further development and **will vary by document type** — a cue sheet, a
-  deck, a one-sheet and a web page do not share one geometry. Defining a global scale now
-  would invent a constraint rather than derive one. Do not treat them as authoritative.
+- **Geometry is not defined, and as of v1.0.1 it is no longer shipped.** `spacing.json`,
+  `radius.json`, `elevation.json` and `breakpoints.json` were **removed**. They were v0.1
+  first-pass candidates that had never been through an exploration or iteration cycle, yet the
+  build emitted them as authoritative — so the repo was contradicting the brand kit, which
+  states geometry is undefined. Shipping unvalidated values is worse than shipping none: a
+  consumer cannot tell a guess from a decision.
+
+  Two of them were also actively wrong. `elevation` used `rgba(15, 23, 42, …)` — Tailwind's
+  slate-900, a **blue** shadow in a system that explicitly retired blue and whose dark ground
+  is neutral `#141416`. `breakpoints` described a website that does not exist yet.
+
+  **Geometry gets its own development phase** (see `LEARNINGS.md`). Spacing, radius, elevation
+  and breakpoints will be derived — together with layout structure and candidate type
+  pairings — and proven across every surface the brand touches before anything is locked. They
+  will likely differ by document type: a cue sheet, a deck, a one-sheet and a web page do not
+  share one geometry.
 - **v1.x — Stable.** Major.minor.patch. Token additions are minor bumps. Breaking changes (removed/renamed tokens) are major bumps. Released quarterly from the LEARNINGS log per `docs/OPERATING_CADENCE.md`.
 
 ## Three sources of truth

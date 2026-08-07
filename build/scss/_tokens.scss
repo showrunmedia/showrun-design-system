@@ -1,11 +1,6 @@
 
 // Do not edit directly, this file was auto-generated.
 
-$breakpoint-mobile: 0px; // Mobile — 0px and up (default)
-$breakpoint-tablet: 640px; // Tablet — 640px and up
-$breakpoint-desktop: 1024px; // Desktop — 1024px and up
-$breakpoint-wide: 1440px; // Wide — 1440px and up
-$breakpoint-ultra: 1920px; // Ultrawide — 1920px and up (deck size)
 $color-ground-paper: #f5f4f1; // Light ground. Warm-neutral, R−B spread +4, so it flatters tungsten in the photography.
 $color-ground-charcoal: #141416; // Dark ground. Chosen against the photography: graded plates floor at ~26/255 luma because the Showrun grade lifts blacks. At luma 20.2 this sits BELOW that floor so images sit into the page. #1A1A1A matched the floor and edges dissolved; #1D1D1D sat above it and images punched a hole.
 $color-text-on-paper: #000000; // 19.09:1 on paper. AA + AAA.
@@ -17,22 +12,15 @@ $color-alpha-divider: 0.55;
 $color-alpha-soft-rule: 0.35;
 $color-alpha-hairline: 0.22;
 $color-alpha-tint: 0.12;
-$elevation-0: none; // Flat — no shadow. Default for production register.
-$elevation-1: 0 1px 2px rgba(15, 23, 42, 0.04); // Subtle — borders, inputs at rest. Cards on light backgrounds.
-$elevation-2: 0 4px 12px rgba(15, 23, 42, 0.06); // Soft — raised cards, hover state on flat cards.
-$elevation-3: 0 8px 24px rgba(15, 23, 42, 0.08); // Medium — modals, popovers.
-$elevation-4: 0 16px 40px rgba(15, 23, 42, 0.12); // High — dialogs, floating panels.
 $image-grade-saturation: 0.68; // −32%. Sits below the vibrancy clients and agencies use — that gap is the separation.
 $image-grade-black-lift: 12; // 0–255. Shadows go milky rather than crushed: film, not video. This is why the charcoal ground must sit under 26/255.
 $image-grade-warm-bias: 1.012; // Red gain against blue. Keeps skin and tungsten honest once saturation drops.
 $image-temperature-default: warm;
 $image-temperature-cool-exception: Available for specific campaigns or stage designs, but must come from natively cool light in the scene — overcast, north window, cool-white LED, blue hour, screen glow. Never from cooling a warm source.;
-$image-people: Photographed, not generated. Hybrid AI compositing is acceptable for objects and environments only — never for people, and never for anything presented as Daniel's own work.;
-$radius-none: 0px; // No radius — sharp edges, for production-register tables and grids
-$radius-sharp: 4px; // Sharp — Production Register (cue sheets, schedules, SOWs, contracts). The precision IS the design.
-$radius-default: 8px; // Default — most card and button radii. Neutral register.
-$radius-soft: 12px; // Soft — Cinematic Register (marketing, social, BTS, proposal covers).
-$radius-pill: 9999px; // Pill — fully rounded badges, status indicators
+$image-sourcing-modes: original (real photography, graded) | hybrid (original supplies the true environment; generation completes the coverage) | generated (built from the creative brief, no source photography);
+$image-sourcing-bar: Believability, not provenance. Every mode must read as though a photographer was in the room. An image that announces itself as generated has failed, however it was made.;
+$image-sourcing-people: The full range is available and the surface decides: invented people as art direction, Daniel's own likeness, and real collaborators or partners rendered with their own visual identity. Density is a judgement call per surface — a capabilities deck littered with the founder reads as self-regarding. Prefer him incidental and candid: in the background, on headset, mid-conversation with a client, a profile or a silhouette. Sprinkle, never saturate.;
+$image-sourcing-limits: Two, both about honesty rather than technique. (1) Never fabricate a factual claim — Daniel at an event he did not work, or a generated venue presented as a specific named client's production. The image may complete a true story; it may not invent one. (2) Real, identifiable people require their own permission. Invented figures are art direction and carry no such claim.;
 $semantic-dark-background: #141416;
 $semantic-dark-text: #ffffff;
 $semantic-dark-muted: #9a9a9a;
@@ -43,17 +31,6 @@ $semantic-light-text: #000000;
 $semantic-light-muted: #6e6c69;
 $semantic-light-accent: #fc4c13; // 3.09:1 — AA-large. Navigational text only on this ground.
 $semantic-light-rule: #6e6c69; // Apply at alpha.hairline (0.22).
-$spacing-0: 0px; // Zero — no spacing
-$spacing-1: 4px; // Tightest — icon padding, inline gaps
-$spacing-2: 8px; // Tight — small gaps, label-to-input
-$spacing-3: 12px; // Snug — button padding, badge interior
-$spacing-4: 16px; // Base — default rhythm
-$spacing-5: 24px; // Comfortable — paragraph spacing
-$spacing-6: 32px; // Section — small section break
-$spacing-7: 48px; // Section large — H2 surround
-$spacing-8: 64px; // Slide gutter — deck margins
-$spacing-9: 96px; // Hero — landing-page hero verticals
-$spacing-10: 128px; // Hero large — full-bleed sections
 $typography-family-display: Switzer; // Display and body. Variable. Fontshare / ITF Free Font License. Chosen because it complements the logo wordmark through shared flat-sided roundness without impersonating it — a system face that matched would make the lockup read as set type rather than a mark.
 $typography-family-mono: 'Martian Mono'; // Labels, values, title blocks, FIG captions. Chosen on measured x-height: 60.5% against IBM Plex Mono's 51.6% — 17% taller at the same nominal size, which is what fixed small-label legibility.
 $typography-weight-display: 700; // 900 was too heavy.
