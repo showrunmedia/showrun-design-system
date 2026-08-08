@@ -46,26 +46,36 @@ export const SemanticLightMuted: string;
 export const SemanticLightAccent: string;
 /** Apply at alpha.hairline (0.22). */
 export const SemanticLightRule: string;
-/** Display and body. Variable. Fontshare / ITF Free Font License. Chosen because it complements the logo wordmark through shared flat-sided roundness without impersonating it — a system face that matched would make the lockup read as set type rather than a mark. */
+/** Headlines, oversized numerals, section titles. Grotesque with masthead authority. Variable: wght 100–900 plus a wdth axis 62–125, so condensed-editorial and wide-poster come out of one file. Replaces Switzer, which is Fontshare and therefore cannot render in a shared Google Doc. */
 export const TypographyFamilyDisplay: string;
-/** Labels, values, title blocks, FIG captions. Chosen on measured x-height: 60.5% against IBM Plex Mono's 51.6% — 17% taller at the same nominal size, which is what fixed small-label legibility. */
+/** All running text, captions, table content. Locked first and independently: at 54.6% it carries the highest x-height of any candidate, which is what keeps 14px cue text legible. Variable wght 100–900 with true italics. */
+export const TypographyFamilyBody: string;
+/** Labels, values, times, cue states, running heads, title blocks. NEVER a display or heading face. Engineered and slightly squared — it reads as instrumentation, which is the right register on a cue sheet. 600 weight span with true italics; not variable, which is immaterial for a face used at fixed label sizes. Replaces Martian Mono, which has NO ITALIC at all — a functional gap, since a held or soft cue needs to look different from a hard one. */
 export const TypographyFamilyMono: string;
-/** 900 was too heavy. */
-export const TypographyWeightDisplay: number;
-/** 400 read as too light. Fixed with weight plus leading and ink contrast, not a new family. */
-export const TypographyWeightBody: number;
-export const TypographyWeightLabel: number;
+/** Archivo at 800 for headlines. The variable axis reaches 900; 800 holds more counter shape at large sizes. */
+export const TypographyWeightDisplay: string;
+/** Inter 400 for running text. Its x-height carries the weight Switzer needed 500 to reach. */
+export const TypographyWeightBody: string;
+export const TypographyWeightBodyEmphasis: string;
+/** IBM Plex Mono 600 for labels; 700 for a cue state that must read as a command. */
+export const TypographyWeightLabel: string;
 export const TypographySizeCoverHeadline: string;
 export const TypographySizeSectionHeading: string;
-/** Oversized-number treatment for stat moments. */
+/** Oversized stat treatment. One per slide. */
 export const TypographySizeNumeral: string;
 export const TypographySizeBody: string;
 export const TypographySizeValue: string;
-/** Floor. Was 13px before the breathing-room pass; do not go back down. */
 export const TypographySizeLabel: string;
-export const TypographyLeadingBody: number;
+/** 17px x 1.62 = 27.54px, which is where the 28px baseline grid comes from. That grid is the one piece of geometry that is actually derived rather than chosen. */
+export const TypographyLeadingBody: string;
 export const TypographyTrackingCoverHeadline: string;
 export const TypographyTrackingSectionHeading: string;
 export const TypographyTrackingNumeral: string;
 export const TypographyTrackingLabel: string;
 export const TypographyTrackingAccentLabel: string;
+export const TypographyAxesDisplayWeight: string;
+/** Archivo wdth. Below 100 for condensed editorial headlines; above for wide poster settings. Default 100. */
+export const TypographyAxesDisplayWidth: string;
+export const TypographyAxesBodyWeight: string;
+/** Static instances, not a variable axis. */
+export const TypographyAxesMonoWeight: string;

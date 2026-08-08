@@ -201,3 +201,39 @@ Documentation and tokens drift apart silently because nothing fails when they di
   `grep -r "<old rule>" build/` is the check that would have caught this on day one.
 - Treat any value inherited from a framework scaffold as unexamined until measured against the
   palette it now lives in.
+
+---
+
+## v1.1.0 — A brand face that cannot render on a collaborator's machine is not a brand face
+
+**2026-08-07.** The locked v1.0 type system was Switzer for display and body, Martian Mono for
+labels. Both were chosen on measured merit — x-height, set width, licence terms — and both were
+wrong, for a reason that never came up during selection.
+
+**The constraint that was missing.** Cue sheets, briefs, call sheets and working Sheets get
+*shared*. A producer, a client or a collaborator opens the file on their machine, and it has to
+render as designed. Switzer is Fontshare. **Google Docs and Sheets have no font-upload path** —
+the picker is the Google Fonts catalogue and nothing else. So every shared working document was
+silently falling back to whatever the recipient had installed. The design broke on someone
+else's screen and we would never see it.
+
+Worth being precise about the Word case too, because it looks like an escape hatch and is not:
+a `.docx` *can* embed fonts, but that is **editable** embedding. The Fontshare FFL grants
+**read-only PDF** embedding only. So the workaround is a licence violation as well as a
+rendering gamble. PDF was always safe; nothing else was.
+
+**A second gap, found the same day.** Martian Mono **has no italic**. On a cue sheet that is
+functional, not stylistic — a held or soft cue needs to look different from a hard one, and the
+label face could not express it.
+
+**Locked v1.1.0.** Archivo (display) / Inter (body) / IBM Plex Mono (labels). All three on
+Google Fonts, all three SIL OFL, all three with real weight range and true italics.
+
+**Adopted.**
+- **Distribution is a type selection criterion, ranked above aesthetics.** Ask where a face has
+  to render *before* measuring x-heights. A face that fails this cannot be rescued by liking it.
+- When a document is collaborative, the font question is "what will the *recipient's* software
+  resolve", not "what is installed here".
+- Check the italic. A missing italic is invisible in a specimen and load-bearing in a table.
+- Verify against the Google Fonts CSS2 API, not memory — `?family=<Name>` returning 400 is the
+  whole test.

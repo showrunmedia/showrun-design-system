@@ -31,20 +31,26 @@ $semantic-light-text: #000000;
 $semantic-light-muted: #6e6c69;
 $semantic-light-accent: #fc4c13; // 3.09:1 — AA-large. Navigational text only on this ground.
 $semantic-light-rule: #6e6c69; // Apply at alpha.hairline (0.22).
-$typography-family-display: Switzer; // Display and body. Variable. Fontshare / ITF Free Font License. Chosen because it complements the logo wordmark through shared flat-sided roundness without impersonating it — a system face that matched would make the lockup read as set type rather than a mark.
-$typography-family-mono: 'Martian Mono'; // Labels, values, title blocks, FIG captions. Chosen on measured x-height: 60.5% against IBM Plex Mono's 51.6% — 17% taller at the same nominal size, which is what fixed small-label legibility.
-$typography-weight-display: 700; // 900 was too heavy.
-$typography-weight-body: 500; // 400 read as too light. Fixed with weight plus leading and ink contrast, not a new family.
-$typography-weight-label: 600;
+$typography-family-display: Archivo; // Headlines, oversized numerals, section titles. Grotesque with masthead authority. Variable: wght 100–900 plus a wdth axis 62–125, so condensed-editorial and wide-poster come out of one file. Replaces Switzer, which is Fontshare and therefore cannot render in a shared Google Doc.
+$typography-family-body: Inter; // All running text, captions, table content. Locked first and independently: at 54.6% it carries the highest x-height of any candidate, which is what keeps 14px cue text legible. Variable wght 100–900 with true italics.
+$typography-family-mono: 'IBM Plex Mono'; // Labels, values, times, cue states, running heads, title blocks. NEVER a display or heading face. Engineered and slightly squared — it reads as instrumentation, which is the right register on a cue sheet. 600 weight span with true italics; not variable, which is immaterial for a face used at fixed label sizes. Replaces Martian Mono, which has NO ITALIC at all — a functional gap, since a held or soft cue needs to look different from a hard one.
+$typography-weight-display: 800; // Archivo at 800 for headlines. The variable axis reaches 900; 800 holds more counter shape at large sizes.
+$typography-weight-body: 400; // Inter 400 for running text. Its x-height carries the weight Switzer needed 500 to reach.
+$typography-weight-body-emphasis: 600;
+$typography-weight-label: 600; // IBM Plex Mono 600 for labels; 700 for a cue state that must read as a command.
 $typography-size-cover-headline: 74px;
 $typography-size-section-heading: 46px;
-$typography-size-numeral: 186px; // Oversized-number treatment for stat moments.
+$typography-size-numeral: 186px; // Oversized stat treatment. One per slide.
 $typography-size-body: 17px;
 $typography-size-value: 17px;
-$typography-size-label: 14px; // Floor. Was 13px before the breathing-room pass; do not go back down.
-$typography-leading-body: 1.62;
+$typography-size-label: 14px;
+$typography-leading-body: 1.62; // 17px x 1.62 = 27.54px, which is where the 28px baseline grid comes from. That grid is the one piece of geometry that is actually derived rather than chosen.
 $typography-tracking-cover-headline: -2.3px;
 $typography-tracking-section-heading: -1.3px;
 $typography-tracking-numeral: -8px;
 $typography-tracking-label: 0.12em;
 $typography-tracking-accent-label: 0.14em;
+$typography-axes-display-weight: 100..900;
+$typography-axes-display-width: 62..125; // Archivo wdth. Below 100 for condensed editorial headlines; above for wide poster settings. Default 100.
+$typography-axes-body-weight: 100..900;
+$typography-axes-mono-weight: 100..700; // Static instances, not a variable axis.
