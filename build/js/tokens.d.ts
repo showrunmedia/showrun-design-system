@@ -50,14 +50,14 @@ export const SemanticLightRule: string;
 export const TypographyFamilyDisplay: string;
 /** All running text, captions, table content. Locked first and independently: at 54.6% it carries the highest x-height of any candidate, which is what keeps 14px cue text legible. Variable wght 100–900 with true italics. */
 export const TypographyFamilyBody: string;
-/** Labels, values, times, cue states, running heads, title blocks. NEVER a display or heading face. Engineered and slightly squared — it reads as instrumentation, which is the right register on a cue sheet. 600 weight span with true italics; not variable, which is immaterial for a face used at fixed label sizes. Replaces Martian Mono, which has NO ITALIC at all — a functional gap, since a held or soft cue needs to look different from a hard one. */
+/** Labels, values, times, cue states, running heads, title blocks. NEVER a display or heading face. Taller x-height (55%) and rounder counters than the alternatives, so digits stay open rather than packing tight — chosen on how it holds a TIME column and a call-sheet key/value strip, not on a specimen. Variable wght 100–800 with true italics. Replaces Martian Mono, which has NO ITALIC at all — a functional gap, since a held or soft cue must not look like a hard one. */
 export const TypographyFamilyMono: string;
 /** Archivo at 800 for headlines. The variable axis reaches 900; 800 holds more counter shape at large sizes. */
 export const TypographyWeightDisplay: string;
 /** Inter 400 for running text. Its x-height carries the weight Switzer needed 500 to reach. */
 export const TypographyWeightBody: string;
 export const TypographyWeightBodyEmphasis: string;
-/** IBM Plex Mono 600 for labels; 700 for a cue state that must read as a command. */
+/** JetBrains Mono 600 for labels; 700 for a cue state that must read as a command. Italic 400 for a held or soft cue. */
 export const TypographyWeightLabel: string;
 export const TypographySizeCoverHeadline: string;
 export const TypographySizeSectionHeading: string;
@@ -77,5 +77,5 @@ export const TypographyAxesDisplayWeight: string;
 /** Archivo wdth. Below 100 for condensed editorial headlines; above for wide poster settings. Default 100. */
 export const TypographyAxesDisplayWidth: string;
 export const TypographyAxesBodyWeight: string;
-/** Static instances, not a variable axis. */
+/** JetBrains Mono is variable, unlike the IBM Plex alternative that was considered alongside it. */
 export const TypographyAxesMonoWeight: string;

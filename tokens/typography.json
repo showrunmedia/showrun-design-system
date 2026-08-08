@@ -14,46 +14,113 @@
         "$description": "All running text, captions, table content. Locked first and independently: at 54.6% it carries the highest x-height of any candidate, which is what keeps 14px cue text legible. Variable wght 100–900 with true italics."
       },
       "mono": {
-        "$value": "IBM Plex Mono",
+        "$value": "JetBrains Mono",
         "$type": "fontFamily",
-        "$description": "Labels, values, times, cue states, running heads, title blocks. NEVER a display or heading face. Engineered and slightly squared — it reads as instrumentation, which is the right register on a cue sheet. 600 weight span with true italics; not variable, which is immaterial for a face used at fixed label sizes. Replaces Martian Mono, which has NO ITALIC at all — a functional gap, since a held or soft cue needs to look different from a hard one."
+        "$description": "Labels, values, times, cue states, running heads, title blocks. NEVER a display or heading face. Taller x-height (55%) and rounder counters than the alternatives, so digits stay open rather than packing tight — chosen on how it holds a TIME column and a call-sheet key/value strip, not on a specimen. Variable wght 100–800 with true italics. Replaces Martian Mono, which has NO ITALIC at all — a functional gap, since a held or soft cue must not look like a hard one."
       },
       "$extensions": {
         "showrun.availability": "All three are on Google Fonts, verified against the CSS2 API. This is a hard requirement, not a preference: a shared Sheet or Doc renders with the recipient's fallback otherwise, and the design silently breaks on someone else's screen.",
-        "showrun.retired": "Switzer, Cabinet Grotesk, General Sans, Supreme (all Fontshare, not on Google Fonts). Martian Mono (no italic). Instrument Serif was evaluated and rejected — single weight, no range."
+        "showrun.retired": "Switzer, Cabinet Grotesk, General Sans, Supreme (all Fontshare, not on Google Fonts). Martian Mono (no italic). Instrument Serif (single weight, no range). IBM Plex Mono was the runner-up for mono and lost on character, not capability — it packs digits tighter and reads more like instrumentation; JetBrains keeps a TIME column more open."
       }
     },
     "weight": {
-      "display": { "$value": "800", "$type": "fontWeight", "$description": "Archivo at 800 for headlines. The variable axis reaches 900; 800 holds more counter shape at large sizes." },
-      "body":    { "$value": "400", "$type": "fontWeight", "$description": "Inter 400 for running text. Its x-height carries the weight Switzer needed 500 to reach." },
-      "bodyEmphasis": { "$value": "600", "$type": "fontWeight" },
-      "label":   { "$value": "600", "$type": "fontWeight", "$description": "IBM Plex Mono 600 for labels; 700 for a cue state that must read as a command." }
+      "display": {
+        "$value": "800",
+        "$type": "fontWeight",
+        "$description": "Archivo at 800 for headlines. The variable axis reaches 900; 800 holds more counter shape at large sizes."
+      },
+      "body": {
+        "$value": "400",
+        "$type": "fontWeight",
+        "$description": "Inter 400 for running text. Its x-height carries the weight Switzer needed 500 to reach."
+      },
+      "bodyEmphasis": {
+        "$value": "600",
+        "$type": "fontWeight"
+      },
+      "label": {
+        "$value": "600",
+        "$type": "fontWeight",
+        "$description": "JetBrains Mono 600 for labels; 700 for a cue state that must read as a command. Italic 400 for a held or soft cue."
+      }
     },
     "size": {
-      "coverHeadline":  { "$value": "74px", "$type": "dimension" },
-      "sectionHeading": { "$value": "46px", "$type": "dimension" },
-      "numeral":        { "$value": "186px", "$type": "dimension", "$description": "Oversized stat treatment. One per slide." },
-      "body":           { "$value": "17px", "$type": "dimension" },
-      "value":          { "$value": "17px", "$type": "dimension" },
-      "label":          { "$value": "14px", "$type": "dimension" },
+      "coverHeadline": {
+        "$value": "74px",
+        "$type": "dimension"
+      },
+      "sectionHeading": {
+        "$value": "46px",
+        "$type": "dimension"
+      },
+      "numeral": {
+        "$value": "186px",
+        "$type": "dimension",
+        "$description": "Oversized stat treatment. One per slide."
+      },
+      "body": {
+        "$value": "17px",
+        "$type": "dimension"
+      },
+      "value": {
+        "$value": "17px",
+        "$type": "dimension"
+      },
+      "label": {
+        "$value": "14px",
+        "$type": "dimension"
+      },
       "$description": "Proven for slides only. These are not a general type scale — see the geometry note in the brand kit; a cue sheet, a one-sheet and a web page do not share one."
     },
     "leading": {
-      "body": { "$value": "1.62", "$type": "number", "$description": "17px x 1.62 = 27.54px, which is where the 28px baseline grid comes from. That grid is the one piece of geometry that is actually derived rather than chosen." }
+      "body": {
+        "$value": "1.62",
+        "$type": "number",
+        "$description": "17px x 1.62 = 27.54px, which is where the 28px baseline grid comes from. That grid is the one piece of geometry that is actually derived rather than chosen."
+      }
     },
     "tracking": {
-      "coverHeadline":  { "$value": "-2.3px", "$type": "dimension" },
-      "sectionHeading": { "$value": "-1.3px", "$type": "dimension" },
-      "numeral":        { "$value": "-8px",   "$type": "dimension" },
-      "label":          { "$value": "0.12em", "$type": "dimension" },
-      "accentLabel":    { "$value": "0.14em", "$type": "dimension" }
+      "coverHeadline": {
+        "$value": "-2.3px",
+        "$type": "dimension"
+      },
+      "sectionHeading": {
+        "$value": "-1.3px",
+        "$type": "dimension"
+      },
+      "numeral": {
+        "$value": "-8px",
+        "$type": "dimension"
+      },
+      "label": {
+        "$value": "0.12em",
+        "$type": "dimension"
+      },
+      "accentLabel": {
+        "$value": "0.14em",
+        "$type": "dimension"
+      }
     },
     "axes": {
       "$description": "Variable axes available, and what each is for. Using them is how the system flexes without adding families.",
-      "displayWeight": { "$value": "100..900", "$type": "string" },
-      "displayWidth":  { "$value": "62..125",  "$type": "string", "$description": "Archivo wdth. Below 100 for condensed editorial headlines; above for wide poster settings. Default 100." },
-      "bodyWeight":    { "$value": "100..900", "$type": "string" },
-      "monoWeight":    { "$value": "100..700", "$type": "string", "$description": "Static instances, not a variable axis." }
+      "displayWeight": {
+        "$value": "100..900",
+        "$type": "string"
+      },
+      "displayWidth": {
+        "$value": "62..125",
+        "$type": "string",
+        "$description": "Archivo wdth. Below 100 for condensed editorial headlines; above for wide poster settings. Default 100."
+      },
+      "bodyWeight": {
+        "$value": "100..900",
+        "$type": "string"
+      },
+      "monoWeight": {
+        "$value": "100..800",
+        "$type": "string",
+        "$description": "JetBrains Mono is variable, unlike the IBM Plex alternative that was considered alongside it."
+      }
     }
   }
 }

@@ -59,7 +59,7 @@
     "family": {
       "display": "Archivo",
       "body": "Inter",
-      "mono": "IBM Plex Mono"
+      "mono": "JetBrains Mono"
     },
     "weight": {
       "display": "800",
@@ -89,7 +89,7 @@
       "displayWeight": "100..900",
       "displayWidth": "62..125",
       "bodyWeight": "100..900",
-      "monoWeight": "100..700"
+      "monoWeight": "100..800"
     }
   }
 }
