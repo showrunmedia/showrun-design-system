@@ -237,3 +237,39 @@ Google Fonts, all three SIL OFL, all three with real weight range and true itali
 - Check the italic. A missing italic is invisible in a specimen and load-bearing in a table.
 - Verify against the Google Fonts CSS2 API, not memory — `?family=<Name>` returning 400 is the
   whole test.
+
+---
+
+## v1.2.0 — A colour can fail for a reason a contrast checker will not tell you
+
+**2026-08-07.** Vermilion was the sole accent, and links were vermilion. Two separate defects,
+and only one of them was measurable.
+
+**The measurable one.** Vermilion is **3.09 on paper** — AA-large only. A link is body-size by
+definition, so every link on the light ground sat below AA. It could not be tuned out either:
+sweeping the full lightness range showed no single orange clears AA-normal on *both* grounds,
+because the two requirements move in opposite directions and cross around 4.0/4.2 where neither
+passes. The one-accent rule and AA compliance were structurally incompatible for link text.
+
+**The one no checker would have caught.** With links in vermilion, an inline link and the
+vermilion **nav accent are the same colour**. A navigational highlight and an interactive target
+became indistinguishable. This was invisible in every specimen and every ratio table — it only
+appeared once a nav bar and a paragraph of body copy were rendered *in the same frame*.
+
+**Fixed** with a teal link pair scoped to links only: `#007870` on paper (4.87), `#009C91` on
+charcoal (5.40). Hue 176°, picked from five matched pairs spanning 164–188°, deliberately
+greener than the Showrun OS teal (`#0096BC`, 192°) — related enough to hint at the product
+family, distinct enough not to read as the retired v7 blue. It ships as a **pair**, one value
+per ground, exactly like the greys, for the same reason: no single value clears AA-normal on
+both.
+
+**Adopted.**
+- **Render candidates in a populated frame, not a swatch.** Ratios test a colour against a
+  ground; they cannot test it against the *other colours already on the page*. Two roles
+  colliding is a hierarchy bug that only composition reveals.
+- When a palette rule and an accessibility requirement are structurally incompatible, add a
+  **scoped** token rather than bending the rule or the value. "One accent" survives intact —
+  teal is not an accent, it is a link colour, and the description says so in the token itself.
+- Keep the underline. The affordance must not depend on hue alone.
+- A board scaled to 42% cannot be judged. Two rounds were wasted before rebuilding at native
+  size — **show colour decisions at reading size or not at all.**

@@ -14,6 +14,8 @@
   --color-alpha-soft-rule: 0.35;
   --color-alpha-hairline: 0.22;
   --color-alpha-tint: 0.12;
+  --color-link-on-paper: #007870; /** 4.87:1 on paper. AA-normal, so it clears at body size, which is the whole point. */
+  --color-link-on-charcoal: #009c91; /** 5.40:1 on charcoal. AA-normal at any size. */
   --image-grade-saturation: 0.68; /** −32%. Sits below the vibrancy clients and agencies use — that gap is the separation. */
   --image-grade-black-lift: 12; /** 0–255. Shadows go milky rather than crushed: film, not video. This is why the charcoal ground must sit under 26/255. */
   --image-grade-warm-bias: 1.012; /** Red gain against blue. Keeps skin and tungsten honest once saturation drops. */
@@ -51,9 +53,11 @@
   --semantic-dark-muted: var(--color-grey-on-charcoal);
   --semantic-dark-accent: var(--color-accent-vermilion); /** 5.42:1 — unrestricted at any size on this ground. */
   --semantic-dark-rule: var(--color-grey-on-charcoal); /** Apply at alpha.hairline (0.22). */
+  --semantic-dark-link: var(--color-link-on-charcoal); /** Links only. Never a fill, rule, heading or CTA — vermilion keeps all of those. */
   --semantic-light-background: var(--color-ground-paper);
   --semantic-light-text: var(--color-text-on-paper);
   --semantic-light-muted: var(--color-grey-on-paper);
   --semantic-light-accent: var(--color-accent-vermilion); /** 3.09:1 — AA-large. Navigational text only on this ground. */
   --semantic-light-rule: var(--color-grey-on-paper); /** Apply at alpha.hairline (0.22). */
+  --semantic-light-link: var(--color-link-on-paper); /** Links only. Never a fill, rule, heading or CTA — vermilion keeps all of those. */
 }

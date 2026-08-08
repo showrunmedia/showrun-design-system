@@ -12,6 +12,8 @@ $color-alpha-divider: 0.55;
 $color-alpha-soft-rule: 0.35;
 $color-alpha-hairline: 0.22;
 $color-alpha-tint: 0.12;
+$color-link-on-paper: #007870; // 4.87:1 on paper. AA-normal, so it clears at body size, which is the whole point.
+$color-link-on-charcoal: #009c91; // 5.40:1 on charcoal. AA-normal at any size.
 $image-grade-saturation: 0.68; // −32%. Sits below the vibrancy clients and agencies use — that gap is the separation.
 $image-grade-black-lift: 12; // 0–255. Shadows go milky rather than crushed: film, not video. This is why the charcoal ground must sit under 26/255.
 $image-grade-warm-bias: 1.012; // Red gain against blue. Keeps skin and tungsten honest once saturation drops.
@@ -26,11 +28,13 @@ $semantic-dark-text: #ffffff;
 $semantic-dark-muted: #9a9a9a;
 $semantic-dark-accent: #fc4c13; // 5.42:1 — unrestricted at any size on this ground.
 $semantic-dark-rule: #9a9a9a; // Apply at alpha.hairline (0.22).
+$semantic-dark-link: #009c91; // Links only. Never a fill, rule, heading or CTA — vermilion keeps all of those.
 $semantic-light-background: #f5f4f1;
 $semantic-light-text: #000000;
 $semantic-light-muted: #6e6c69;
 $semantic-light-accent: #fc4c13; // 3.09:1 — AA-large. Navigational text only on this ground.
 $semantic-light-rule: #6e6c69; // Apply at alpha.hairline (0.22).
+$semantic-light-link: #007870; // Links only. Never a fill, rule, heading or CTA — vermilion keeps all of those.
 $typography-family-display: Archivo; // Headlines, oversized numerals, section titles. Grotesque with masthead authority. Variable: wght 100–900 plus a wdth axis 62–125, so condensed-editorial and wide-poster come out of one file. Replaces Switzer, which is Fontshare and therefore cannot render in a shared Google Doc.
 $typography-family-body: Inter; // All running text, captions, table content. Locked first and independently: at 54.6% it carries the highest x-height of any candidate, which is what keeps 14px cue text legible. Variable wght 100–900 with true italics.
 $typography-family-mono: 'JetBrains Mono'; // Labels, values, times, cue states, running heads, title blocks. NEVER a display or heading face. Taller x-height (55%) and rounder counters than the alternatives, so digits stay open rather than packing tight — chosen on how it holds a TIME column and a call-sheet key/value strip, not on a specimen. Variable wght 100–800 with true italics. Replaces Martian Mono, which has NO ITALIC at all — a functional gap, since a held or soft cue must not look like a hard one.

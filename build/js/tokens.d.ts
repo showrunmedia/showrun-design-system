@@ -20,6 +20,10 @@ export const ColorAlphaDivider: number;
 export const ColorAlphaSoftRule: number;
 export const ColorAlphaHairline: number;
 export const ColorAlphaTint: number;
+/** 4.87:1 on paper. AA-normal, so it clears at body size, which is the whole point. */
+export const ColorLinkOnPaper: string;
+/** 5.40:1 on charcoal. AA-normal at any size. */
+export const ColorLinkOnCharcoal: string;
 /** −32%. Sits below the vibrancy clients and agencies use — that gap is the separation. */
 export const ImageGradeSaturation: number;
 /** 0–255. Shadows go milky rather than crushed: film, not video. This is why the charcoal ground must sit under 26/255. */
@@ -39,6 +43,8 @@ export const SemanticDarkMuted: string;
 export const SemanticDarkAccent: string;
 /** Apply at alpha.hairline (0.22). */
 export const SemanticDarkRule: string;
+/** Links only. Never a fill, rule, heading or CTA — vermilion keeps all of those. */
+export const SemanticDarkLink: string;
 export const SemanticLightBackground: string;
 export const SemanticLightText: string;
 export const SemanticLightMuted: string;
@@ -46,6 +52,8 @@ export const SemanticLightMuted: string;
 export const SemanticLightAccent: string;
 /** Apply at alpha.hairline (0.22). */
 export const SemanticLightRule: string;
+/** Links only. Never a fill, rule, heading or CTA — vermilion keeps all of those. */
+export const SemanticLightLink: string;
 /** Headlines, oversized numerals, section titles. Grotesque with masthead authority. Variable: wght 100–900 plus a wdth axis 62–125, so condensed-editorial and wide-poster come out of one file. Replaces Switzer, which is Fontshare and therefore cannot render in a shared Google Doc. */
 export const TypographyFamilyDisplay: string;
 /** All running text, captions, table content. Locked first and independently: at 54.6% it carries the highest x-height of any candidate, which is what keeps 14px cue text legible. Variable wght 100–900 with true italics. */

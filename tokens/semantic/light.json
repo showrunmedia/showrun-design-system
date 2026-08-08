@@ -24,6 +24,11 @@
         "$value": "{color.grey.onPaper}",
         "$type": "color",
         "$description": "Apply at alpha.hairline (0.22)."
+      },
+      "link": {
+        "$value": "{color.link.onPaper}",
+        "$type": "color",
+        "$description": "Links only. Never a fill, rule, heading or CTA — vermilion keeps all of those."
       }
     }
   }

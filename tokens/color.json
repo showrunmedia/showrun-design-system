@@ -94,6 +94,19 @@
         "$value": 0.12,
         "$type": "number"
       }
+    },
+    "link": {
+      "$description": "Teal, and ONLY for links. This is not a second accent and must never be used as one — no fills, no rules, no headings, no icons, no CTAs. Vermilion remains the sole accent and keeps the nav highlight, hairlines and buttons.\n\nIt exists because vermilion FAILS at this job. Measured 3.09 on paper, which is AA-large only, while a link is body-size by definition — so link text on the light ground was below AA with no way to fix it by tuning the orange (no single value clears AA-normal on both grounds; the requirements move in opposite directions).\n\nThere is a second reason, found only by rendering it: with links in vermilion, an inline link and the vermilion nav accent are the same colour, so a navigational highlight and an interactive target become indistinguishable. Teal separates the two.\n\nHue 176 deg, chosen from five matched pairs spanning 164-188. Sits deliberately greener than the Showrun OS teal (#0096BC, 192 deg) — related enough to hint at the product family before OS launches, distinct enough not to read as the retired v7 blue. Ships as a PAIR, one value per ground, exactly like the greys, because no single teal clears AA-normal on both.",
+      "onPaper": {
+        "$value": "#007870",
+        "$type": "color",
+        "$description": "4.87:1 on paper. AA-normal, so it clears at body size, which is the whole point."
+      },
+      "onCharcoal": {
+        "$value": "#009C91",
+        "$type": "color",
+        "$description": "5.40:1 on charcoal. AA-normal at any size."
+      }
     }
   }
 }

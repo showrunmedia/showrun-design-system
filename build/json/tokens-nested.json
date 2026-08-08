@@ -20,6 +20,10 @@
       "softRule": 0.35,
       "hairline": 0.22,
       "tint": 0.12
+    },
+    "link": {
+      "onPaper": "#007870",
+      "onCharcoal": "#009c91"
     }
   },
   "image": {
@@ -45,14 +49,16 @@
       "text": "#ffffff",
       "muted": "#9a9a9a",
       "accent": "#fc4c13",
-      "rule": "#9a9a9a"
+      "rule": "#9a9a9a",
+      "link": "#009c91"
     },
     "light": {
       "background": "#f5f4f1",
       "text": "#000000",
       "muted": "#6e6c69",
       "accent": "#fc4c13",
-      "rule": "#6e6c69"
+      "rule": "#6e6c69",
+      "link": "#007870"
     }
   },
   "typography": {
